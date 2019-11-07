@@ -1,0 +1,1057 @@
+/* =================================
+------------------------------------
+  The Look - Photo Gallery Template
+  Version: 1.0
+ ------------------------------------
+ ====================================*/
+
+/*----------------------------------------*/
+
+/* Template default CSS
+ /*----------------------------------------*/
+
+html,
+body {
+  /* height: 100%; */
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #081624;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 18px;
+  color: #5c5c5c;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+/*---------------------
+ Helper CSS
+  -----------------------*/
+
+.section-title {
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 36px;
+}
+
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.spad {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.sp-container {
+  max-width: 1584px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.big-title,
+.page-title h2 {
+  font-size: 120px;
+  line-height: 1;
+  margin-bottom: 95px;
+}
+
+.dud {
+  color: #757575;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: rgb(78, 236, 15);
+}
+
+/*---------------------
+ Commom elements
+  -----------------------*/
+
+.element {
+  margin-bottom: 85px;
+}
+
+.element button.site-btn {
+  margin-right: 17px;
+  margin-bottom: 10px;
+}
+
+.element .icon-box {
+  padding-right: 40px;
+}
+
+.el-title {
+  margin-bottom: 50px;
+}
+
+/* buttons */
+
+.site-btn {
+  display: inline-block;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 167px;
+  text-align: left;
+  text-transform: uppercase;
+  background: transparent;
+  color: #081624;
+  line-height: normal;
+  cursor: pointer;
+  padding: 0;
+}
+
+.site-btn img {
+  margin-left: 5px;
+  max-width: 28px;
+}
+
+.site-btn:hover {
+  color: #081624;
+}
+
+.site-btn.sb-big {
+  font-size: 14px;
+}
+
+.site-btn.sb-big img {
+  max-width: 41px;
+  margin-left: 12px;
+}
+
+.site-btn.sb-light {
+  color: #fff;
+}
+
+.site-btn.sb-light:hover {
+  color: #fff;
+}
+
+.site-btn.sb-line {
+  border: 2px solid #081624;
+  min-width: 167px;
+  padding: 19px 10px;
+  min-height: 57px;
+  text-align: center;
+}
+
+.site-btn.sb-solid {
+  background: #081624;
+  min-width: 167px;
+  padding: 19px 10px;
+  min-height: 57px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/* Preloder */
+
+#preloder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: #000;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 60px;
+  animation: loader 0.8s linear infinite;
+  -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+
+/* ----------------
+ Hero section
+  ---------------------*/
+
+.hero-section {
+  clear: both;
+  background-color: #e5dede;
+}
+
+.hs-item {
+  height: 950px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.hs-item .hs-bg {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  max-width: 1000px;
+  right: -20%;
+  top: 0;
+  opacity: 0;
+}
+
+.hs-item .hs-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hs-item .hs-text h2 {
+  font-size: 100px;
+  line-height: 0.9;
+  margin-bottom: 30px;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+
+.hs-item .hs-text p {
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+
+.hs-item .hs-text .site-btn {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+
+.hs-item .hs-text .site-btn img {
+  display: inline-block !important;
+  width: auto !important;
+}
+
+.hs-item .sp-container {
+  max-width: 1625px;
+}
+
+.hero-slider .owl-item.active .hs-item .hs-text h2,
+.hero-slider .owl-item.active .hs-item .hs-text p,
+.hero-slider .owl-item.active .hs-item .site-btn {
+  top: 0;
+  opacity: 1;
+}
+
+.hero-slider .owl-item.active .hs-item .hs-bg {
+  right: 0;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease 0.2s;
+  transition: all 0.5s ease 0.2s;
+}
+
+.hero-slider .owl-item.active .hs-item .hs-text h2 {
+  -webkit-transition: all 0.5s ease 0.4s;
+  transition: all 0.5s ease 0.4s;
+}
+
+.hero-slider .owl-item.active .hs-item .hs-text p {
+  -webkit-transition: all 0.5s ease 0.6s;
+  transition: all 0.5s ease 0.6s;
+}
+
+.hero-slider .owl-item.active .hs-item .site-btn {
+  -webkit-transition: all 0.5s ease 0.8s;
+  transition: all 0.5s ease 0.8s;
+}
+
+.hero-slider .owl-nav {
+  position: absolute;
+  width: 70%;
+  max-width: 1298px;
+  height: 84px;
+  right: 0;
+  bottom: 0;
+}
+
+.hero-slider .owl-nav button.owl-next,
+.hero-slider .owl-nav button.owl-prev {
+  width: 109px;
+  height: 84px;
+  background: #fff;
+}
+
+.hero-slider .owl-nav button.owl-next span,
+.hero-slider .owl-nav button.owl-prev span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  padding-right: 5px;
+}
+
+.hero-slider .owl-nav button.owl-prev {
+  background: #081624;
+}
+
+.hero-slider .owl-nav button.owl-prev span {
+  color: #fff;
+  padding-left: 5px;
+  padding-right: 0;
+}
+
+/* Services Section
+--------------------------------*/
+
+#services {
+  padding: 60px 0 40px 0;
+}
+
+#services .box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+#services .box:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#services .icon {
+  margin: 0 auto 15px auto;
+  padding-top: 12px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+#services .icon i {
+  font-size: 36px;
+  line-height: 1;
+}
+
+#services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#services .title a {
+  color: #111;
+}
+
+#services .box:hover .title a {
+  color: #1bb1dc;
+}
+
+#services .description {
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* why us section */
+#why-us {
+  padding: 60px 0;
+  background: white;
+  height: 500px;
+}
+
+#why-us .section-header h3,
+#why-us .section-header p {
+  color: black;
+}
+
+.section-header h3 {
+  font-size: 36px;
+  color: #283d50;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 60px;
+  color: #556877;
+  width: 50%;
+}
+
+
+/* end */
+
+
+/* ----------------
+ Responsive
+  ---------------------*/
+
+/* Medium screen : 992px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hs-item {
+    padding: 15px;
+  }
+
+  .hs-item .hs-text h2 {
+    font-size: 100px;
+  }
+
+  .hs-item .hs-bg {
+    width: 100%;
+    right: 0;
+  }
+
+  .hs-item .sm-overlay:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    opacity: 0.4;
+  }
+
+  .hero-slider .owl-nav {
+    width: 100%;
+  }
+
+  .gallery-left-col {
+    padding-right: 30px;
+  }
+
+  .gallery-right-col {
+    padding-left: 35px;
+  }
+
+  .footer-text {
+    padding-right: 0;
+  }
+
+  .big-title,
+  .page-title h2 {
+    font-size: 90px;
+  }
+
+  .info-numbers .in-item h2 {
+    margin-right: 30px;
+    font-size: 70px;
+  }
+
+  .info-numbers .in-item h2 span {
+    font-size: 39px;
+    bottom: 35px;
+  }
+
+  .artists-row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .artists-col {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .artists-more-btn {
+    margin-top: 160px;
+  }
+}
+
+/* Tablet :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-menu li a {
+    margin-left: 25px;
+  }
+
+  .hero-slider .owl-nav {
+    width: 100%;
+  }
+
+  .hs-item .hs-text h2 {
+    font-size: 90px;
+  }
+
+  .hs-item .hs-bg {
+    width: 100%;
+    right: 0;
+  }
+
+  .hs-item .sm-overlay:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    opacity: 0.4;
+  }
+
+  .gallery-left-col {
+    padding-right: 20px;
+  }
+
+  .gallery-right-col {
+    padding-left: 25px;
+  }
+
+  .gallery-item {
+    margin-bottom: 70px;
+  }
+
+  .blog-title-col,
+  .blog-content-col {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding-left: 0;
+  }
+
+  .footer-section {
+    padding-bottom: 0;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 80px 0 30px;
+  }
+
+  .gallery-page .gallery-left-col {
+    padding-right: 0;
+  }
+
+  .gallery-page .gallery-right-col {
+    padding-left: 0;
+  }
+
+  .gallery-content {
+    padding-top: 80px;
+  }
+
+  .gallery-slider .owl-stage {
+    right: 80px;
+  }
+
+  .artists-more-btn {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .contact-warp {
+    height: auto;
+  }
+
+  .contact-text {
+    float: left;
+  }
+
+  .map {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    right: 0;
+    top: 0;
+    clear: both;
+    background: #333;
+  }
+
+  .accordion-area {
+    margin-bottom: 80px;
+  }
+
+  .circle-progress {
+    margin-bottom: 40px;
+  }
+
+  .element .icon-box {
+    padding-right: 0;
+  }
+}
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+  .header-warp {
+    padding: 30px 15px;
+  }
+
+  .header-section .main-menu {
+    display: none;
+  }
+
+  .slicknav_menu {
+    display: block;
+    margin-top: -44px;
+    background: transparent;
+  }
+
+  .slicknav_btn {
+    margin-right: 10px;
+    background: #081624;
+  }
+
+  .slicknav_nav {
+    background: #081624;
+  }
+
+  .slicknav_nav a:hover,
+  .slicknav_nav .slicknav_row:hover {
+    background: #25394c;
+    color: #fff;
+  }
+
+  .hero-slider .owl-nav {
+    width: 100%;
+  }
+
+  .hs-item {
+    height: auto;
+    padding: 15px;
+  }
+
+  .hs-item .hs-text {
+    padding: 180px 0;
+  }
+
+  .hs-item .hs-text h2 {
+    font-size: 90px;
+  }
+
+  .hs-item .hs-bg {
+    width: 100%;
+    right: 0;
+  }
+
+  .hs-item .sm-overlay:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    opacity: 0.4;
+  }
+
+  .gallery-left-col {
+    padding-right: 0;
+  }
+
+  .gallery-right-col {
+    padding-left: 0;
+  }
+
+  .gallery-item {
+    margin-bottom: 70px;
+  }
+
+  .blog-title-col,
+  .blog-content-col {
+    width: 100%;
+  }
+
+  .blog-item .blog-thumb {
+    float: none;
+  }
+
+  .contact-form {
+    padding-left: 0;
+  }
+
+  .footer-section {
+    padding-bottom: 0;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 80px 0 30px;
+  }
+
+  .info-numbers .in-item {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .info-numbers .in-item h2 {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+    font-size: 60px;
+  }
+
+  .info-numbers .in-item h2 span {
+    font-size: 39px;
+    bottom: 35px;
+  }
+
+  .big-title,
+  .page-title h2 {
+    font-size: 80px;
+  }
+
+  .gallery-content {
+    padding-top: 50px;
+    padding-right: 0;
+  }
+
+  .gallery-slider .nav-warp {
+    position: relative;
+    text-align: center;
+  }
+
+  .gallery-slider .nav-warp .owl-nav {
+    float: none;
+    top: 0;
+    padding-bottom: 80px;
+  }
+
+  .gallery-slider {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gallery-slider .owl-stage {
+    right: 0;
+  }
+
+  .artists-row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .artists-col {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .artists-more-btn {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .contact-warp {
+    height: auto;
+  }
+
+  .contact-text {
+    float: none;
+  }
+
+  .map {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    right: 0;
+    top: 0;
+    clear: both;
+    background: #333;
+  }
+
+  .milestone {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .milestone h2 {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+    font-size: 60px;
+  }
+
+  .milestone h2 span {
+    font-size: 39px;
+    bottom: 35px;
+  }
+
+  .circle-progress {
+    -webkit-box-pack: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    margin-bottom: 40px;
+  }
+
+  .icon-box {
+    margin-bottom: 40px;
+  }
+}
+
+/* Small Mobile :320px. */
+
+@media only screen and (max-width: 479px) {
+
+  .big-title,
+  .page-title h2,
+  .hs-item .hs-text h2 {
+    font-size: 30px;
+  }
+
+  .gallery-title {
+    font-size: 36px;
+  }
+
+  .milestone h2 {
+    font-size: 50px;
+  }
+}
+
+
+
+/* Custom class to make the trasnparent color in navbar  */
+.transparent {
+  background: rgba(229, 222, 222, 0.5);
+}
+
+.sticky {
+  background: #fff !important;
+  transition: background-color 500ms ease;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(229, 222, 222, 0.1);
+}
+
+/* @media (max-width: 575.98px) { */
+
+/* .display-2 {
+    font-size: 2.75rem;
+    font-weight: 300;
+    line-height: 1.0;
+  } */
+
+/* } */
+
+
+@media (max-width:320px) {
+  .carouselHeading {
+    font-size: 0.5rem !important;
+    font-weight: 200;
+    line-height: 0.5;
+  }
+
+  .mainText {
+    margin-top: 1rem;
+  }
+}
+
+
+
+@media (max-width:580px) {
+  .carouselHeading {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    line-height: 1.0;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .carousel {
+    margin-top: 15% !important;
+    margin-bottom: 25% !important;
+    /*height:50vh !important; */
+  }
+}
+
+@media screen and (min-width:437px) {
+  #carouselChagningText {
+    /* margin-left: 8rem; */
+    margin-top: 15% !important;
+  }
+
+  .carouselHeading {
+    font-size: 2rem !important;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+
+@media screen and (min-width:768px) {
+  #carouselChagningText {
+    margin-left: 8rem;
+    margin-top: 15% !important;
+  }
+
+  .carouselHeading {
+    font-size: 2rem !important;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .carousel {
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+  }
+
+  #carouselChagningText {
+    margin-left: 8rem;
+    margin-top: 15% !important;
+  }
+  .carouselHeading {
+    font-size: 3rem !important;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .carousel {
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+  }
+
+  #carouselChagningText {
+    margin-left: 8rem;
+    margin-top: 15% !important;
+  }
+  .carouselHeading {
+    font-size: 5rem !important;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+
+
+
+
+
+
+.carousel {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
