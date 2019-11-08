@@ -15,24 +15,31 @@ flip card
     height: 100%;
     margin: 0;
     display: flex;
+    -webkit-backface-visibility:visible;
+    -moz-backface-visibility: visible;
+    -ms-backface-visibility:visible;
   }
   
   .card-front {
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
   }
   
   .card-back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     position: absolute;
     top: 0;
   }
   
   .card-flip:hover .card-front {
     transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
   }
     
   .card-flip:hover .card-back {
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
   }
 
 
